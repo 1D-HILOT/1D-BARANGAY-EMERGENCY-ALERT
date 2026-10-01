@@ -1,0 +1,282 @@
+/* Reset and Base Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #202124;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Constrain view to a realistic mobile aspect ratio */
+.app-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 70px; /* Space for fixed bottom navigation */
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* Top Navbar */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #e8eaed;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    background-color: #e8eaed;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #5f6368;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    font-size: 0.75rem;
+    color: #5f6368;
+}
+
+.username {
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.btn-menu {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #3c4043;
+    padding: 4px 8px;
+}
+
+/* Primary SOS Section */
+.sos-section {
+    background: radial-gradient(circle, #fff5f5 0%, #ffebee 100%);
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid #fabad0;
+}
+
+.sos-ring-outer {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 16px;
+    background: rgba(213, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: broadcast 2.5s infinite ease-in-out;
+}
+
+.sos-ring-inner {
+    width: 154px;
+    height: 154px;
+    background: rgba(213, 0, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-main-sos {
+    width: 130px;
+    height: 130px;
+    background: linear-gradient(135deg, #ff1744 0%, #d50000 100%);
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(213, 0, 0, 0.4);
+    transition: transform 0.1s;
+}
+
+.btn-main-sos:active {
+    transform: scale(0.94);
+    background: #b71c1c;
+}
+
+.sos-icon {
+    font-size: 2.2rem;
+    margin-bottom: 4px;
+}
+
+.sos-text {
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+.location-status {
+    font-size: 0.85rem;
+    color: #3c4043;
+    background: #ffffff;
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Category Grid Section */
+.categories-section {
+    padding: 24px 20px;
+    flex-grow: 1;
+}
+
+.categories-section h2 {
+    font-size: 1.05rem;
+    color: #202124;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.grid-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.category-card {
+    background: #ffffff;
+    border: 1.5px solid #e8eaed;
+    border-radius: 12px;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.category-card:active {
+    background-color: #f8f9fa;
+    transform: scale(0.98);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #3c4043;
+}
+
+/* Color indicators on active card boundaries */
+.category-card.medical:active { border-color: #e53935; }
+.category-card.fire:active { border-color: #f4511e; }
+.category-card.police:active { border-color: #1e88e5; }
+.category-card.disaster:active { border-color: #00acc1; }
+
+/* Announcement banner styling */
+.info-section {
+    padding: 0 20px 16px;
+}
+
+.announcement-banner {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    padding: 10px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge {
+    background: #ffb300;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.ticker-text {
+    font-size: 0.75rem;
+    color: #5d4037;
+    font-weight: 500;
+}
+
+/* Fixed Navigation at bottom */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 420px;
+    height: 64px;
+    background: #ffffff;
+    border-top: 1px solid #e8eaed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #70757a;
+    width: 25%;
+}
+
+.nav-icon {
+    font-size: 1.25rem;
+    margin-bottom: 2px;
+}
+
+.nav-text {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.nav-item.active {
+    color: #d50000;
+}
+
+/* Pulse animation for the giant outer SOS ring */
+@keyframes broadcast {
+    0% { transform: scale(0.96); opacity: 0.8; }
+    50% { transform: scale(1.04); opacity: 0.4; }
+    100% { transform: scale(0.96); opacity: 0.8; }
+}
