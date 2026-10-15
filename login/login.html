@@ -3,51 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ActionAgad - Mamburao Emergency Response</title>
-    <link rel="stylesheet" href="login.css">
+    <title>ACTIONAGAD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: { 600: '#dc2626', 700: '#b91c1c' } } } }
+        };
+    </script>
 </head>
-<body>
-    <div class="login-container">
-        <!-- App Header/Logo Area -->
-        <header class="app-header">
-            <div class="logo-icon">🚨</div>
-            <h1>ActionAgad</h1>
-            <p class="tagline">Mamburao Emergency Response Portal</p>
-        </header>
 
-        <!-- Login Form -->
-        <form class="login-form">
-            <div class="form-group">
-                <label for="phone">Mobile Number</label>
-                <input type="tel" id="phone" placeholder="e.g., 09123456789" required autocomplete="tel">
+<body class="min-h-screen">
+
+    <section class="flex min-h-screen items-center justify-center
+                    bg-gradient-to-br from-red-600 via-red-700 to-red-950
+                    px-4 py-10">
+
+        <div class="w-full max-w-md">
+
+            <!-- ACTIONAGAD Logo and Header -->
+            <div class="mb-6 text-center">
+                <div class="mx-auto mb-3 flex h-24 w-24 items-center justify-center
+                            rounded-full border-4 border-white bg-red-800 shadow-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+                         class="h-16 w-16" fill="none" aria-label="ACTIONAGAD shield logo" role="img">
+                        <path d="M50 5 L88 20 V47 C88 70 72 87 50 97 C28 87 12 70 12 47 V20 Z" fill="white"/>
+                        <path d="M56 17 L31 53 H47 L41 79 L70 41 H53 Z" fill="#b91c1c"/>
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-extrabold tracking-wide text-white">ACTIONAGAD</h1>
+                <p class="mt-2 text-sm text-red-100">Fast Action. Better Service.</p>
+                <p class="mt-1 text-sm text-red-100">Barangay Emergency Response</p>
             </div>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password" required autocomplete="current-password">
+            <!-- Quick Report Card -->
+            <div class="rounded-2xl bg-white p-6 shadow-2xl sm:p-8">
+
+                <h2 class="mb-2 text-2xl font-bold text-gray-900">Report an Emergency</h2>
+                <p class="mb-5 text-sm text-gray-500">
+                    No account needed. Choose the emergency and send it to your barangay.
+                </p>
+
+                <!-- Call now -->
+                <a href="tel:911"
+                   class="mb-5 flex items-center justify-center gap-2 rounded-lg
+                          bg-gray-900 px-5 py-3 text-sm font-semibold text-white
+                          shadow-md transition hover:bg-black focus:outline-none
+                          focus:ring-4 focus:ring-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5" aria-hidden="true">
+                        <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/>
+                    </svg>
+                    Call 911 now
+                </a>
+
+                <form id="reportForm" action="#" method="POST" class="space-y-5">
+
+                    <!-- Emergency type -->
+                    <fieldset>
+                        <legend class="mb-2 text-sm font-medium text-gray-700">What is happening?</legend>
+                        <div class="grid grid-cols-2 gap-3">
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="type" value="medical" class="peer sr-only" required>
+                                <div class="rounded-lg border-2 border-gray-200 bg-gray-50 p-3 text-center
+                                            transition peer-checked:border-red-600 peer-checked:bg-red-50
+                                            peer-focus-visible:ring-2 peer-focus-visible:ring-red-300">
+                                    <div class="text-2xl" aria-hidden="true">🚑</div>
+                                    <div class="text-sm font-semibold text-gray-800">Medical</div>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="type" value="fire" class="peer sr-only">
+                                <div class="rounded-lg border-2 border-gray-200 bg-gray-50 p-3 text-center
+                                            transition peer-checked:border-red-600 peer-checked:bg-red-50
+                                            peer-focus-visible:ring-2 peer-focus-visible:ring-red-300">
+                                    <div class="text-2xl" aria-hidden="true">🔥</div>
+                                    <div class="text-sm font-semibold text-gray-800">Fire</div>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="type" value="crime" class="peer sr-only">
+                                <div class="rounded-lg border-2 border-gray-200 bg-gray-50 p-3 text-center
+                                            transition peer-checked:border-red-600 peer-checked:bg-red-50
+                                            peer-focus-visible:ring-2 peer-focus-visible:ring-red-300">
+                                    <div class="text-2xl" aria-hidden="true">🚨</div>
+                                    <div class="text-sm font-semibold text-gray-800">Crime / Safety</div>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="type" value="disaster" class="peer sr-only">
+                                <div class="rounded-lg border-2 border-gray-200 bg-gray-50 p-3 text-center
+                                            transition peer-checked:border-red-600 peer-checked:bg-red-50
+                                            peer-focus-visible:ring-2 peer-focus-visible:ring-red-300">
+                                    <div class="text-2xl" aria-hidden="true">🌊</div>
+                                    <div class="text-sm font-semibold text-gray-800">Flood / Disaster</div>
+                                </div>
+                            </label>
+
+                        </div>
+                    </fieldset>
+
+                    <!-- Location details -->
+                    <div>
+                        <label for="details" class="mb-2 block text-sm font-medium text-gray-700">
+                            Where exactly? <span class="font-normal text-gray-400">(street, landmark)</span>
+                        </label>
+                        <input type="text" id="details" name="details" required
+                               placeholder="Near the covered court, Purok 2"
+                               class="w-full rounded-lg border border-gray-300 bg-gray-50 p-3
+                                      text-gray-900 outline-none transition
+                                      focus:border-red-600 focus:ring-2 focus:ring-red-200">
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <label for="phone" class="mb-2 block text-sm font-medium text-gray-700">
+                            Contact number <span class="font-normal text-gray-400">(so responders can reach you)</span>
+                        </label>
+                        <input type="tel" id="phone" name="phone" required
+                               placeholder="09XX XXX XXXX" autocomplete="tel"
+                               class="w-full rounded-lg border border-gray-300 bg-gray-50 p-3
+                                      text-gray-900 outline-none transition
+                                      focus:border-red-600 focus:ring-2 focus:ring-red-200">
+                    </div>
+
+                    <!-- Share location -->
+                    <button type="button" id="gpsBtn"
+                            class="w-full rounded-lg border border-red-600 px-5 py-3 text-sm
+                                   font-semibold text-red-600 transition hover:bg-red-50
+                                   focus:outline-none focus:ring-4 focus:ring-red-200">
+                        Share my GPS location
+                    </button>
+                    <input type="hidden" id="coords" name="coords">
+
+                    <!-- Send -->
+                    <button
+                        onclick="window.location.href='userdashboard.html'"
+                        type="submit"
+                            class="w-full rounded-lg bg-red-600 px-5 py-4 text-center text-base
+                                   font-bold text-white shadow-md transition duration-200
+                                   hover:bg-red-700 focus:outline-none focus:ring-4
+                                   focus:ring-red-200 active:scale-[0.98]">
+                        Send Alert
+                    </button>
+
+                    <p id="status" class="hidden rounded-lg bg-green-50 p-3 text-center text-sm font-medium text-green-800" role="status"></p>
+
+                </form>
+
+                <!-- Responders -->
+                <div
+                class="mt-5 border-t border-gray-100 pt-4">
+                    <a href="login.html?role=staff"
+                       class="flex w-full items-center justify-center gap-2 rounded-lg
+                              bg-gray-900 px-5 py-3 text-sm font-semibold text-white
+                              shadow-md transition hover:bg-black focus:outline-none
+                              focus:ring-4 focus:ring-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5" aria-hidden="true">
+                            <path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Zm1 5-3 5h2l-1 5 4-6h-2l1-4h-1Z"/>
+                        </svg>
+                        Responders
+                    </a>
+                </div>
             </div>
 
-            <div class="form-options">
-                <label class="remember-me">
-                    <input type="checkbox"> Remember me
-                </label>
-                <a href="#" class="forgot-pass">Forgot Password?</a>
-            </div>
+            <!-- Footer -->
+            <footer class="mt-6 text-center text-sm text-red-100">
+                &copy; 2026 ACTIONAGAD. All rights reserved.
+            </footer>
 
-            <button type="submit" class="btn-login">Log In</button>
-        </form>
-
-        <!-- Quick Emergency Access (Crucial for an emergency app) -->
-        <div class="emergency-bypass">
-            <p>Immediate Life-Threatening Emergency?</p>
-            <button class="btn-emergency">🚨 Quick SOS Report</button>
         </div>
+    </section>
 
-        <!-- Footer Links -->
-        <footer class="login-footer">
-            <p>Don't have an account? <a href="#">Register Here</a></p>
-            <p class="mdrrmo-text">In partnership with Mamburao MDRRMO</p>
-        </footer>
-    </div>
+    <script>
+        const status = document.getElementById('status');
+
+        document.getElementById('gpsBtn').addEventListener('click', function () {
+            const btn = this;
+            if (!navigator.geolocation) { btn.textContent = 'GPS not available'; return; }
+            btn.textContent = 'Getting location...';
+            navigator.geolocation.getCurrentPosition(
+                p => {
+                    document.getElementById('coords').value = p.coords.latitude + ',' + p.coords.longitude;
+                    btn.textContent = 'Location shared ✓';
+                },
+                () => { btn.textContent = 'Could not get location. Enter it above.'; }
+            );
+        });
+
+        document.getElementById('reportForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // TODO: send new FormData(this) to your backend here
+            status.textContent = 'Alert sent. Responders are being notified. Stay safe and keep your phone on.';
+            status.classList.remove('hidden');
+        });
+    </script>
+
 </body>
 </html>

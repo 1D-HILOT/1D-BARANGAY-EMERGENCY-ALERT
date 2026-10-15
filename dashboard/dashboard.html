@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActionAgad - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navigation Bar -->
+        <nav class="top-nav">
+            <div class="user-profile">
+                <div class="avatar">Juan</div>
+                <div class="user-info">
+                    <span class="welcome">Good day,</span>
+                    <span class="username">Juan Dela Cruz</span>
+                </div>
+            </div>
+            <button class="btn-menu" aria-label="Menu">☰</button>
+        </nav>
+
+        <!-- Main SOS Trigger Area -->
+        <section class="sos-section">
+            <div class="sos-ring-outer">
+                <div class="sos-ring-inner">
+                    <button class="btn-main-sos">
+                        <span class="sos-icon">🚨</span>
+                        <span class="sos-text">TAP & HOLD<br>TO REPORT SOS</span>
+                    </button>
+                </div>
+            </div>
+            <p class="location-status">📍 Current Location: <strong id="current-barangay">Brgy. Payompon, Mamburao</strong></p>
+        </section>
+
+        <!-- Quick Emergency Categories Grid -->
+        <main class="categories-section">
+            <h2>Select Emergency Type</h2>
+            <div class="grid-categories">
+                <!-- Medical -->
+                <button class="category-card medical">
+                    <div class="card-icon">🚑</div>
+                    <span class="card-label">Medical / Ambulance</span>
+                </button>
+
+                <!-- Fire -->
+                <button class="category-card fire">
+                    <div class="card-icon">🚒</div>
+                    <span class="card-label">Fire Rescue (BFP)</span>
+                </button>
+
+                <!-- Police -->
+                <button class="category-card police">
+                    <div class="card-icon">👮</div>
+                    <span class="card-label">Police Assistance (PNP)</span>
+                </button>
+
+                <!-- Disaster / Flood -->
+                <button class="category-card disaster">
+                    <div class="card-icon">🌊</div>
+                    <span class="card-label">Flood & Disaster (MDRRMO)</span>
+                </button>
+            </div>
+        </main>
+
+        <!-- Bottom Informational Bar -->
+        <section class="info-section">
+            <div class="announcement-banner">
+                <span class="badge">NOTICE</span>
+                <p class="ticker-text">MDRRMO Weather Alert: Keep monitored for afternoon heavy rains.</p>
+            </div>
+        </section>
+
+        <!-- Fixed Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Home</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📞</span>
+                <span class="nav-text">Hotlines</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Reports</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>
