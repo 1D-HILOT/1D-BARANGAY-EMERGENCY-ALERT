@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Rescue (BFP) - Emergency Response</title>
+    <link rel="stylesheet" href="fire.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="mobile-wrapper">
+        <!-- Top App Bar -->
+        <header class="top-header">
+            <a href="dashboard.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+            <h2>Fire Rescue (BFP)</h2>
+            <div class="header-placeholder"></div>
+        </header>
+
+        <!-- Main Content Scroll Area -->
+        <main class="content-body">
+            
+            <!-- Location Banner -->
+            <div class="location-banner">
+                <i class="fa-solid fa-location-dot location-icon"></i>
+                <div class="location-text">
+                    <span class="label">Incident Location</span>
+                    <strong>Brgy. Payompon, Mamburao</strong>
+                </div>
+                <button type="button" class="change-loc-btn">Change</button>
+            </div>
+
+            <!-- Emergency Form Card -->
+            <div class="form-card">
+                <div class="card-header">
+                    <div class="emergency-icon-badge fire-badge">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                    </div>
+                    <div>
+                        <h3>Report Fire Outbreak</h3>
+                        <p>Dispatch Bureau of Fire Protection</p>
+                    </div>
+                </div>
+
+                <form action="#" method="POST">
+                    
+                    <!-- Severity Level Selector -->
+                    <div class="input-group">
+                        <label>Fire Intensity</label>
+                        <div class="severity-options">
+                            <label class="severity-card critical">
+                                <input type="radio" name="severity" value="major" checked>
+                                <div class="severity-content">
+                                    <i class="fa-solid fa-fire-burner"></i>
+                                    <span>Major Fire</span>
+                                </div>
+                            </label>
+                            <label class="severity-card moderate">
+                                <input type="radio" name="severity" value="contained">
+                                <div class="severity-content">
+                                    <i class="fa-solid fa-smog"></i>
+                                    <span>Small / Smoke</span>
+                                </div>
+                            </label>
+                            <label class="severity-card minor">
+                                <input type="radio" name="severity" value="hazard">
+                                <div class="severity-content">
+                                    <i class="fa-solid fa-bolt"></i>
+                                    <span>Electrical</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Property Type -->
+                    <div class="input-group">
+                        <label for="property-type">Property Involved</label>
+                        <div class="select-field">
+                            <i class="fa-solid fa-building"></i>
+                            <select id="property-type" required>
+                                <option value="" disabled selected>Select property type</option>
+                                <option value="residential">Residential House / Apartment</option>
+                                <option value="commercial">Commercial Building / Store</option>
+                                <option value="grassfire">Grass / Forest Fire</option>
+                                <option value="vehicle">Vehicle Fire</option>
+                                <option value="industrial">Factory / Warehouse</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Trapped Individuals -->
+                    <div class="input-group">
+                        <label for="trapped-persons">Are people trapped inside?</label>
+                        <div class="select-field">
+                            <i class="fa-solid fa-people-roof"></i>
+                            <select id="trapped-persons" required>
+                                <option value="unknown">Unknown / Not sure</option>
+                                <option value="yes">Yes (Immediate Rescue Needed)</option>
+                                <option value="no">No (Everyone is clear)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Landmark / Details -->
+                    <div class="input-group">
+                        <label for="notes">Landmarks & Details</label>
+                        <div class="textarea-field">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <textarea id="notes" rows="3" placeholder="Specify nearest landmark, access roads, or hazards nearby..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="sos-dispatch-btn">
+                        <i class="fa-solid fa-truck-droplet"></i> Dispatch Fire Rescue
+                    </button>
+                </form>
+            </div>
+
+            <!-- Hotline Box -->
+            <div class="notice-box">
+                <span class="notice-badge">BFP HOTLINE</span>
+                <p>Direct Fire Station: <strong>(043) 987-6543</strong></p>
+            </div>
+        </main>
+
+        <!-- Navigation Bar -->
+        <nav class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="hotlines.html" class="nav-item active">
+                <i class="fa-solid fa-phone"></i>
+                <span>Hotlines</span>
+            </a>
+            <a href="reports.html" class="nav-item">
+                <i class="fa-solid fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+    </div>
+
+</body>
+</html>

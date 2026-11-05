@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActionAgad - User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navigation Bar -->
+        <header class="top-nav">
+            <a href="dashboard.html" class="btn-back" aria-label="Back">←</a>
+            <h2>My Profile</h2>
+            <div class="header-placeholder"></div>
+        </header>
+
+        <!-- Main Profile Content Area -->
+        <main class="content-body">
+            <!-- User Info Card Header -->
+            <div class="profile-header-card">
+                <div class="profile-avatar">Juan</div>
+                <h3>Juan Dela Cruz</h3>
+                <p>Brgy. Payompon, Mamburao</p>
+                <span class="verified-badge">✓ Verified Resident</span>
+            </div>
+
+            <!-- Profile Details Section -->
+            <div class="profile-section-card">
+                <h4>Personal Information</h4>
+                <div class="info-row">
+                    <span class="info-label">Mobile Number</span>
+                    <span class="info-value">+63 912 345 6789</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email Address</span>
+                    <span class="info-value">juan.delacruz@email.com</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Emergency Contact</span>
+                    <span class="info-value">Maria Dela Cruz (+63 998 765 4321)</span>
+                </div>
+            </div>
+
+            <!-- Settings & Actions Section -->
+            <div class="profile-section-card menu-list">
+                <a href="#" class="menu-item">
+                    <span>🔒 Change Password</span>
+                    <span class="arrow">›</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span>📍 Update Default Location</span>
+                    <span class="arrow">›</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span>📜 Terms & Privacy Policy</span>
+                    <span class="arrow">›</span>
+                </a>
+            </div>
+
+            <!-- Logout Button -->
+            <a href="index.html" class="btn-logout">Sign Out</a>
+        </main>
+
+        <!-- Fixed Bottom Navigation (With Profile active) -->
+        <nav class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Home</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📞</span>
+                <span class="nav-text">Hotlines</span>
+            </a>
+            <a href="reports.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Reports</span>
+            </a>
+            <a href="profile.html" class="nav-item active">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

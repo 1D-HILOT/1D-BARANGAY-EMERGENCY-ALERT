@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActionAgad - Reports & History</title>
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navigation Bar -->
+        <header class="top-nav">
+            <a href="dashboard.html" class="btn-back" aria-label="Back">←</a>
+            <h2>Emergency Reports</h2>
+            <div class="header-placeholder"></div>
+        </header>
+
+        <!-- Main Reports Content Area -->
+        <main class="content-body">
+            <!-- Filter Tabs -->
+            <div class="report-tabs">
+                <button class="tab-btn active">All Reports</button>
+                <button class="tab-btn">Active</button>
+                <button class="tab-btn">Resolved</button>
+            </div>
+
+            <!-- Report Card 1: Resolved -->
+            <div class="report-card">
+                <div class="report-header">
+                    <div class="report-type-info">
+                        <span class="report-icon medical-bg">🚑</span>
+                        <div>
+                            <h4>Medical Assistance</h4>
+                            <span class="report-date">Oct 24, 2026 • 2:45 PM</span>
+                        </div>
+                    </div>
+                    <span class="status-badge resolved">Resolved</span>
+                </div>
+                <div class="report-details">
+                    <p><strong>Location:</strong> Brgy. Payompon, Mamburao</p>
+                    <p><strong>Responder:</strong> Mamburao Municipal Hospital Unit</p>
+                </div>
+            </div>
+
+            <!-- Report Card 2: Active / Dispatched -->
+            <div class="report-card">
+                <div class="report-header">
+                    <div class="report-type-info">
+                        <span class="report-icon fire-bg">🚒</span>
+                        <div>
+                            <h4>Fire Rescue (BFP)</h4>
+                            <span class="report-date">Today • 10:12 AM</span>
+                        </div>
+                    </div>
+                    <span class="status-badge active">Dispatched</span>
+                </div>
+                <div class="report-details">
+                    <p><strong>Location:</strong> Brgy. Payompon, Mamburao</p>
+                    <p><strong>Responder:</strong> BFP Unit en route to location</p>
+                </div>
+            </div>
+
+            <!-- Report Card 3: Resolved -->
+            <div class="report-card">
+                <div class="report-header">
+                    <div class="report-type-info">
+                        <span class="report-icon police-bg">👮</span>
+                        <div>
+                            <h4>Police Assistance</h4>
+                            <span class="report-date">Sep 12, 2026 • 8:30 PM</span>
+                        </div>
+                    </div>
+                    <span class="status-badge resolved">Resolved</span>
+                </div>
+                <div class="report-details">
+                    <p><strong>Location:</strong> Brgy. Payompon, Mamburao</p>
+                    <p><strong>Responder:</strong> PNP Mamburao Station</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Fixed Bottom Navigation (With Reports active) -->
+        <nav class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Home</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📞</span>
+                <span class="nav-text">Hotlines</span>
+            </a>
+            <a href="reports.html" class="nav-item active">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Reports</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

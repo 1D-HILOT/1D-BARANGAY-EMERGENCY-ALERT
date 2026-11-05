@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical / Ambulance Emergency - Emergency Response</title>
+    <link rel="stylesheet" href="medical.css">
+    <!-- FontAwesome for UI icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="mobile-wrapper">
+        <!-- Top App Bar -->
+        <header class="top-header">
+            <a href="dashboard.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+            <h2>Medical Assistance</h2>
+            <div class="header-placeholder"></div>
+        </header>
+
+        <!-- Main Content Scroll Area -->
+        <main class="content-body">
+            
+            <!-- Current Location Banner -->
+            <div class="location-banner">
+                <i class="fa-solid fa-location-dot location-icon"></i>
+                <div class="location-text">
+                    <span class="label">Dispatch Location</span>
+                    <strong>Brgy. Payompon, Mamburao</strong>
+                </div>
+                <button type="button" class="change-loc-btn">Change</button>
+            </div>
+
+            <!-- Emergency Form Card -->
+            <div class="form-card">
+                <div class="card-header">
+                    <div class="emergency-icon-badge medical-badge">
+                        <i class="fa-solid fa-truck-medical"></i>
+                    </div>
+                    <div>
+                        <h3>Ambulance Request</h3>
+                        <p>Fill in details for immediate dispatch</p>
+                    </div>
+                </div>
+
+                <form action="#" method="POST">
+                    
+                    <!-- Severity Level Selector -->
+                    <div class="input-group">
+                        <label>Urgency Level</label>
+                        <div class="severity-options">
+                            <label class="severity-card critical">
+                                <input type="radio" name="severity" value="critical" checked>
+                                <div class="severity-content">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    <span>Critical</span>
+                                </div>
+                            </label>
+                            <label class="severity-card moderate">
+                                <input type="radio" name="severity" value="moderate">
+                                <div class="severity-content">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <span>Moderate</span>
+                                </div>
+                            </label>
+                            <label class="severity-card minor">
+                                <input type="radio" name="severity" value="minor">
+                                <div class="severity-content">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Minor</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Type of Incident / Medical Problem -->
+                    <div class="input-group">
+                        <label for="medical-type">Type of Emergency</label>
+                        <div class="select-field">
+                            <i class="fa-solid fa-notes-medical"></i>
+                            <select id="medical-type" required>
+                                <option value="" disabled selected>Select emergency condition</option>
+                                <option value="cardiac">Cardiac Emergency / Chest Pain</option>
+                                <option value="breathing">Difficulty Breathing</option>
+                                <option value="accident">Vehicular Accident / Injury</option>
+                                <option value="stroke">Stroke Symptoms</option>
+                                <option value="maternity">Maternity / Childbirth</option>
+                                <option value="other">Other Medical Condition</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Number of Patients -->
+                    <div class="input-group">
+                        <label for="patient-count">Number of Patients</label>
+                        <div class="input-field">
+                            <i class="fa-solid fa-user-group"></i>
+                            <input type="number" id="patient-count" min="1" value="1" required>
+                        </div>
+                    </div>
+
+                    <!-- Additional Details / Landmarks -->
+                    <div class="input-group">
+                        <label for="notes">Landmark or Additional Info</label>
+                        <div class="textarea-field">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <textarea id="notes" rows="3" placeholder="Near municipal hall, house with red gate..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Request CTA -->
+                    <button type="submit" class="sos-dispatch-btn">
+                        <i class="fa-solid fa-phone-volume"></i> Request Immediate Ambulance
+                    </button>
+                </form>
+            </div>
+
+            <!-- Hotline Alert Banner -->
+            <div class="notice-box">
+                <span class="notice-badge">HOTLINE</span>
+                <p>Direct Hospital Line: <strong>(043) 123-4567</strong></p>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation Bar (Matching Dashboard) -->
+        <nav class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="hotlines.html" class="nav-item active">
+                <i class="fa-solid fa-phone"></i>
+                <span>Hotlines</span>
+            </a>
+            <a href="reports.html" class="nav-item">
+                <i class="fa-solid fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+    </div>
+
+</body>
+</html>
